@@ -13,10 +13,10 @@ const Trailer: React.FC = () => {
     // Cuando la API esté lista
     (window as any).onYouTubeIframeAPIReady = () => {
       playerRef.current = new (window as any).YT.Player("yt-player", {
-  videoId: "dQw4w9WgXcQ",
+  videoId: "EC8cnpLJLl0",
   playerVars: {
     autoplay: 1, // autoplay
-    controls: 1,
+    controls: 0,
     modestbranding: 1,
     mute: 1,     // silenciar
   },
