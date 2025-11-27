@@ -3,6 +3,13 @@ import "./App.css";
 import fondo from "./assets/pantalla_principal.png";
 import game from "./assets/gameplay.png";
 import gol from "./assets/gol.png";
+import barraVida from "./assets/barra-vida.png";
+import barraXP from "./assets/barra-exp.png";
+import subidaNivel from "./assets/subida.png";
+import ataqueGif from "./assets/Ataque.gif";
+import ataqueV1 from "./assets/Ataquev1.gif";
+import ataqueV2 from "./assets/Ataquev2.gif";
+import ataqueV3 from "./assets/Ataquev3.gif";
 
 export default function App() {
   return (
@@ -81,45 +88,148 @@ export default function App() {
 
         </section>
 
-        {/* GAMEPLAY */}
+{/* GAMEPLAY */}
 <section id="gameplay" className="section">
   <h3 className="section-title text-red-400">Jugabilidad</h3>
+
+  {/* DESCRIPCIÓN GENERAL */}
   <p className="section-text leading-relaxed text-gray-300">
-    El jugador controla a <strong className="text-yellow-400">Diego Mamani</strong>, el Soldado Colorado de Bolivia,
-    mientras recorre distintos escenarios del altiplano y pueblos andinos. Su objetivo es sobrevivir al ataque
-    constante de demonios inspirados en la Diablada y criaturas míticas bolivianas.
-    <br/><br/>
-    Kuntur puede lanzar diferentes armas de ataque a distancia, como:
-    <ul className="list-disc ml-6 mt-3 text-gray-400">
-      <li>Huesos encantados obtenidos de espíritus</li>
-      <li>Lanzas ceremoniales</li>
-      <li>Reliquias sagradas y objetos místicos</li>
-    </ul>
-    <br/>
-    Cada enemigo derrotado deja caer <strong className="text-green-400">gemas espirituales</strong>, las cuales pueden ser
-    recogidas por el jugador. Estas gemas llenan automáticamente una barra de energía espiritual ubicada en la
-    interfaz del juego.
-    <br/><br/>
-    Una vez la barra esté completa, las gemas se canjean de forma automática por uno de tres ítems especiales:
-    <ul className="list-disc ml-6 mt-3 text-gray-400">
-      <li><strong>Cocaquina</strong> — Aumenta tu energia y velocidad</li>
-      <li><strong>Chanchirron de Pollo</strong> — ataque con un 5% mas de efectividad</li>
-      <li><strong>Api</strong> — Si te gusta mucho te protege</li>
-    </ul>
-    <br/>
-    El jugador deberá gestionar estratégicamente sus ataques y movilidad para sobrevivir mientras enfrenta hordas
-    cada vez más intensas y criaturas más poderosas del inframundo andino.
+    El jugador controla a <strong className="text-yellow-400">Diego Mamani</strong>, mientras atraviesa diversos
+    escenarios del altiplano boliviano enfrentando oleadas continuas de enemigos. 
+    La mecánica se inspira en el estilo <strong>Vampire Survivors</strong>: el personaje ataca automáticamente
+    con sus armas mientras el jugador solo debe moverse, sobrevivir y mejorar sus habilidades a lo largo de la partida.
   </p>
 
-  <div className="flex justify-center mt-6">
-    <img src={gol} alt="Cinemática historia" className="article-img mt-6" />
+  <br />
 
+{/* ATAQUE SIMPLE */}
+<h4 className="text-lg font-bold text-yellow-300 mt-4">Ataque Simple</h4>
+<p className="text-gray-400">
+  El ataque básico del personaje se ejecuta automáticamente. El jugador solo debe concentrarse en moverse para esquivar a los enemigos mientras el ataque se dispara de forma continua.
+</p>
+
+<div className="flex justify-center my-4">
+  <img 
+    src={ataqueGif} 
+    alt="Ataque simple" 
+    className="w-full max-w-md rounded-lg shadow-lg"
+  />
+</div>
+
+
+  {/* BARRA DE VIDA */}
+  <h4 className="text-lg font-bold text-red-300">Barra de Vida</h4>
+  <p className="text-gray-400">Muestra la salud actual del jugador. Si llega a cero, la partida termina.</p>
+
+  <div className="flex justify-center my-4">
+    <img src={barraVida} alt="Barra de vida" className="article-img" />
+  </div>
+
+  <br />
+
+  {/* BARRA DE EXPERIENCIA */}
+  <h4 className="text-lg font-bold text-blue-300">Barra de Experiencia</h4>
+  <p className="text-gray-400">
+    Cada enemigo derrotado deja caer puntos de experiencia. Al recogerlos, la barra se llena. 
+    Cuando llega al máximo, Diego sube de nivel.
+  </p>
+
+  <div className="flex justify-center my-4">
+    <img src={barraXP} alt="Barra de experiencia" className="article-img" />
+  </div>
+
+  <br />
+
+  {/* SUBIDA DE NIVEL */}
+  <h4 className="text-lg font-bold text-green-300">Subida de Nivel</h4>
+  <p className="text-gray-400">
+    Al subir de nivel, el jugador debe elegir entre tres ítems aleatorios que mejoran alguna de sus capacidades.
+  </p>
+
+  <div className="flex justify-center my-4">
+    <img src={subidaNivel} alt="Subida de nivel" className="article-img" />
+  </div>
+
+
+  <br />
+
+{/* ATAQUES POR NIVEL */}
+<h4 className="text-lg font-bold text-yellow-300 mt-8">Ataques por Nivel</h4>
+<p className="text-gray-400 mb-4">
+  A medida que el jugador mejora sus armas, cada nivel de ataque incrementa el daño, la velocidad o el área de impacto.
+</p>
+
+<div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+  {/* NIVEL 1 */}
+  <div className="bg-gray-900 p-4 rounded-xl shadow-lg text-center">
+    <h5 className="text-lg font-semibold text-yellow-400 mb-2">Nivel 1</h5>
+    <img 
+      src={ataqueV1} 
+      alt="Ataque Nivel 1" 
+      className="w-full h-48 object-contain rounded-lg border border-gray-700"
+    />
+    <p className="text-gray-400 text-sm mt-2">
+      Ataque básico inicial. Daño moderado y ritmo constante.
+    </p>
+  </div>
+
+  {/* NIVEL 2 */}
+  <div className="bg-gray-900 p-4 rounded-xl shadow-lg text-center">
+    <h5 className="text-lg font-semibold text-yellow-400 mb-2">Nivel 2</h5>
+    <img 
+      src={ataqueV2} 
+      alt="Ataque Nivel 2" 
+      className="w-full h-48 object-contain rounded-lg border border-gray-700"
+    />
+    <p className="text-gray-400 text-sm mt-2">
+      Mayor rango y daño. Ideal para oleadas tempranas.
+    </p>
+  </div>
+
+  {/* NIVEL 3 */}
+  <div className="bg-gray-900 p-4 rounded-xl shadow-lg text-center">
+    <h5 className="text-lg font-semibold text-yellow-400 mb-2">Nivel 3</h5>
+    <img 
+      src={ataqueV3} 
+      alt="Ataque Nivel 3" 
+      className="w-full h-48 object-contain rounded-lg border border-gray-700"
+    />
+    <p className="text-gray-400 text-sm mt-2">
+      Golpes más amplios, mayor daño y mejor control del área.
+    </p>
+  </div>
+
+</div>
+
+
+  {/* DURACIÓN Y PROGRESIÓN */}
+  <h4 className="text-lg font-bold text-purple-300">Duración de la Partida</h4>
+  <p className="text-gray-400">
+    La partida dura <strong>30 minutos</strong>. Conforme avanza el tiempo, las oleadas se vuelven más intensas.
+  </p>
+
+  <p className="text-gray-400 mt-2">Orden de aparición de enemigos:</p>
+  <ul className="list-disc ml-6 mt-3 text-gray-400">
+    <li>Robot</li>
+    <li>Oso Blanco</li>
+    <li>Llama Robot</li>
+    <li>Oso Café</li>
+    <li>Muerte</li>
+  </ul>
+
+  <br />
+
+  {/* IMAGEN CENTRAL */}
+  <div className="flex justify-center mt-6">
+    <img src={gol} alt="Gameplay ilustrativo" className="article-img mt-6" />
   </div>
 
   <p className="text-gray-400 italic text-center mt-3">
-    “Domina las reliquias, reclama las gemas… y sobrevive al Supay.”
+    “Sobrevive, mejora, evoluciona… y resiste hasta el último minuto.”
   </p>
 </section>
+
 
 
         {/* PERSONAJES */}
