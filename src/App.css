@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Usa las clases personalizadas dentro de un @layer */
+@layer components {
+  .section {
+    @apply space-y-6;
+  }
+
+  .section-title {
+    @apply text-4xl font-bold text-blue-400 border-l-4 border-blue-600 pl-3 mb-6;
+  }
+
+  .section-text {
+    @apply text-gray-300 leading-relaxed max-w-3xl mx-auto text-lg text-justify;
+  }
+
+  .article-img {
+    @apply rounded-xl shadow-lg my-8 mx-auto object-cover max-h-[400px];
+  }
+
+  body {
+    @apply font-sans bg-black text-gray-200;
+  }
+}
