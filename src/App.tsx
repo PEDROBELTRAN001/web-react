@@ -3,6 +3,7 @@ import "./App.css";
 import fondo from "./assets/pantalla_principal.png";
 import game from "./assets/gameplay.png";
 import gol from "./assets/gol.png";
+import Trailer from "./trailer";
 
 export default function App() {
   return (
@@ -16,11 +17,11 @@ export default function App() {
           <a href="#historia" className="hover:text-yellow-400 transition">
             Historia
           </a>
+          <a href="#trailer" className="hover:text-yellow-400 transition">
+            Trailer
+          </a>
           <a href="#gameplay" className="hover:text-yellow-400 transition">
             Jugabilidad
-          </a>
-          <a href="#personajes" className="hover:text-yellow-400 transition">
-            Personajes
           </a>
           <a href="#personajes" className="hover:text-yellow-400 transition">
             Personajes
@@ -86,6 +87,14 @@ export default function App() {
           <img src={game} alt="Cinemática historia" className="article-img mt-6" />
 
         </section>
+        {/* TRAILER */}
+        {/* TRAILER */}
+<section id="trailer" className="section">
+  <h3 className="section-title text-red-400">TEASER</h3>
+  <Trailer />
+</section>
+
+
 
         {/* GAMEPLAY */}
 <section id="gameplay" className="section">
@@ -274,8 +283,9 @@ export default function App() {
 
       {/* FOOTER */}
       <footer className="text-center py-8 border-t border-gray-800 text-gray-500 text-sm">
-        © 2025 EpicVerse Studios — Todos los derechos reservados.
+        © 2025 AlpacasGamers — Todos los derechos reservados.
       </footer>
     </div>
   );
 }
+<script src="https://www.youtube.com/iframe_api"></script>
