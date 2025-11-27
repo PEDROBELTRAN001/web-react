@@ -7,6 +7,8 @@ import fondo from "./assets/pantalla_principal.png";
 import game from "./assets/gameplay.png";
 import gol from "./assets/gol.png";
 import Trailer from "./trailer";
+import { FaDownload } from "react-icons/fa";
+
 
 export default function App() {
   useEffect(() => {
@@ -61,12 +63,13 @@ export default function App() {
   <a
     href="/downloads/Pachama.exe"
     download
-    className="px-6 py-3 bg-yellow-400 text-black font-bold rounded-lg hover:bg-yellow-500 transition"
+    className="px-6 py-3 bg-yellow-400 text-black font-bold rounded-lg hover:bg-yellow-500 transition flex items-center gap-2"
   >
+    <FaDownload className="w-5 h-5" />
     Descargar
   </a>
 </div>
-
+        
         </div>
       </section>
 
