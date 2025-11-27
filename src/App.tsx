@@ -6,7 +6,7 @@ import gol from "./assets/gol.png";
 
 export default function App() {
   return (
-    <div className="bg-gradient-to-b from-[#0b0c10] to-black text-gray-200 min-h-screen">
+    <div className="w-screen min-h-screen overflow-x-hidden bg-gradient-to-b from-[#0b0c10] to-black text-gray-200">
       {/* HEADER */}
       <header className="sticky top-0 z-50 bg-black/70 backdrop-blur-sm border-b border-gray-800 py-4 px-10 flex justify-between items-center">
         <h1 className="text-3xl font-extrabold text-yellow-400 tracking-wide">
