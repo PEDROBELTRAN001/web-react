@@ -22,6 +22,9 @@ export default function App() {
           <a href="#personajes" className="hover:text-yellow-400 transition">
             Personajes
           </a>
+          <a href="#artefactos" className="hover:text-yellow-400 transition">
+            Artefactos
+          </a>
           <a href="#desarrolladores" className="hover:text-yellow-400 transition">
             Desarrolladores
           </a>
@@ -172,6 +175,113 @@ export default function App() {
         <p className="text-gray-400 text-sm">
           Guerrero infernal al servicio del Supay. Ataca desde la distancia lanzando esferas negras de energía
           que corrompen el alma del objetivo.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+  {/* ARTEFACTOS */}
+<section id="artefactos" className="section">
+  <h3 className="section-title text-red-400">Artefactos</h3>
+
+  <div className="grid md:grid-cols-3 gap-10">
+
+    {/* ataque basico */}
+    <div className="bg-gray-900 rounded-2xl overflow-hidden shadow-lg hover:shadow-red-500/40 transition transform hover:-translate-y-1">
+      <img
+        src="../../assets/images/femurataque.png"
+        alt="Ataque Principal"
+        className="w-full h-56 object-cover"
+      />
+      <div className="p-5 text-center">
+        <h4 className="text-xl font-semibold text-white mb-1">Ataque Basico</h4>
+        <p className="text-gray-400 text-sm">
+          Ataque ancentral en forma de pua.
+        </p>
+      </div>
+    </div>
+
+    {/* cuchillo de condor */}
+    <div className="bg-gray-900 rounded-2xl overflow-hidden shadow-lg hover:shadow-red-500/40 transition transform hover:-translate-y-1">
+      <img
+        src="../../assets/images/cuchillo.png"
+        alt="Cuchillo"
+        className="w-full h-56 object-cover"
+      />
+      <div className="p-5 text-center">
+        <h4 className="text-xl font-semibold text-white mb-1">Cuchillo</h4>
+        <p className="text-gray-400 text-sm">
+          Cuchillo de la escuela de condores 
+          Obtiene un nuevo tipo de ataque.
+        </p>
+      </div>
+    </div>
+
+    {/* cokaquina */}
+    <div className="bg-gray-900 rounded-2xl overflow-hidden shadow-lg hover:shadow-red-500/40 transition transform hover:-translate-y-1">
+      <img
+        src="../../assets/images/cocaquina.png"
+        alt="Cokaquina"
+        className="w-full h-56 object-cover"
+      />
+      <div className="p-5 text-center">
+        <h4 className="text-xl font-semibold text-white mb-1">Cokaquina</h4>
+        <p className="text-gray-400 text-sm">
+          Puede que tu corazon va mas rapido?
+          Incrementa la velocidad de movimiento.
+        </p>
+      </div>
+    </div>
+
+  </div>
+  <div className="grid md:grid-cols-3 gap-10">
+
+    {/* chicharron de pollo */}
+    <div className="bg-gray-900 rounded-2xl overflow-hidden shadow-lg hover:shadow-red-500/40 transition transform hover:-translate-y-1">
+      <img
+        src="../../assets/images/chi_pollo.png"
+        alt="Chicharron de Pollo"
+        className="w-full h-56 object-cover"
+      />
+      <div className="p-5 text-center">
+        <h4 className="text-xl font-semibold text-white mb-1">Chicharron de pollo</h4>
+        <p className="text-gray-400 text-sm">
+          Antes costabada 5 pesos...,
+          Aumenta el ataque en un 5%.
+        </p>
+      </div>
+    </div>
+
+    {/* api */}
+    <div className="bg-gray-900 rounded-2xl overflow-hidden shadow-lg hover:shadow-red-500/40 transition transform hover:-translate-y-1">
+      <img
+        src="../../assets/images/api.png"
+        alt="Api"
+        className="w-full h-56 object-cover"
+      />
+      <div className="p-5 text-center">
+        <h4 className="text-xl font-semibold text-white mb-1">Api</h4>
+        <p className="text-gray-400 text-sm">
+          Bebida a base de maiz
+          Reduce el daño.
+        </p>
+      </div>
+    </div>
+
+    {/* salteña */}
+    <div className="bg-gray-900 rounded-2xl overflow-hidden shadow-lg hover:shadow-red-500/40 transition transform hover:-translate-y-1">
+      <img
+        src="../../assets/images/salte.png"
+        alt="Saltena"
+        className="w-full h-56 object-cover"
+      />
+      <div className="p-5 text-center">
+        <h4 className="text-xl font-semibold text-white mb-1">Salteña</h4>
+        <p className="text-gray-400 text-sm">
+          El favorito de los alteños, aumenta la vida maxima.
         </p>
       </div>
     </div>
