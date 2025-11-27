@@ -13,7 +13,9 @@ export default function App() {
     AOS.init({ duration: 1000, once: true });
   }, []);
   return (
+    
     <div className="w-screen min-h-screen overflow-x-hidden bg-gradient-to-b from-[#0b0c10] to-black text-gray-200">
+      
       {/* HEADER */}
       <header className="fixed top-0 left-0 w-full z-50 bg-black/70 backdrop-blur-sm border-b border-gray-800 py-4 px-10 flex justify-between items-center">
         <h1 className="text-3xl font-extrabold text-yellow-400 tracking-wide">
@@ -55,6 +57,16 @@ export default function App() {
           <p className="text-gray-300 max-w-2xl mx-auto text-lg italic">
             “Ser soldado boliviano es un acto de valentía y honor.”
           </p>
+          <div className="flex justify-center mt-10">
+  <a
+    href="/downloads/Pachama.exe"
+    download
+    className="px-6 py-3 bg-yellow-400 text-black font-bold rounded-lg hover:bg-yellow-500 transition"
+  >
+    Descargar
+  </a>
+</div>
+
         </div>
       </section>
 
@@ -232,6 +244,7 @@ export default function App() {
           <img src={game} alt="Cinemática historia" className="article-img mt-6" />
 
         </section>
+        
 {/* DESARROLLADORES */}
         <section id="desarrolladores" className="section" data-aos="fade-up">
           <h3 className="section-title text-red-400">Desarrolladores</h3>
