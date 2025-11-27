@@ -8,7 +8,7 @@ export default function App() {
   return (
     <div className="w-screen min-h-screen overflow-x-hidden bg-gradient-to-b from-[#0b0c10] to-black text-gray-200">
       {/* HEADER */}
-      <header className="sticky top-0 z-50 bg-black/70 backdrop-blur-sm border-b border-gray-800 py-4 px-10 flex justify-between items-center">
+      <header className="fixed top-0 left-0 w-full z-50 bg-black/70 backdrop-blur-sm border-b border-gray-800 py-4 px-10 flex justify-between items-center">
         <h1 className="text-3xl font-extrabold text-yellow-400 tracking-wide">
           ALPACAS GAMERS
         </h1>
@@ -21,6 +21,12 @@ export default function App() {
           </a>
           <a href="#personajes" className="hover:text-yellow-400 transition">
             Personajes
+          </a>
+          <a href="#personajes" className="hover:text-yellow-400 transition">
+            Personajes
+          </a>
+          <a href="#artefactos" className="hover:text-yellow-400 transition">
+            Artefactos
           </a>
           <a href="#desarrolladores" className="hover:text-yellow-400 transition">
             Desarrolladores
@@ -46,7 +52,7 @@ export default function App() {
       </section>
 
       {/* CONTENIDO PRINCIPAL */}
-      <main className="max-w-5xl mx-auto px-6 py-16 space-y-24">
+      <main className="max-w-5xl mx-auto px-6 pt-28 pb-16 space-y-24">
         {/* HISTORIA */}
         <section id="historia" className="section">
           <h3 className="section-title text-red-400">Historia</h3>
@@ -178,6 +184,72 @@ export default function App() {
 
   </div>
 </section>
+{/* ARTEFACTOS */}
+        <section id="artefactos" className="section">
+          <h3 className="section-title text-red-400">Artefactos</h3>
+          <p className="section-text leading-relaxed text-gray-300">
+            <strong className="text-yellow-400">Diego Mamani</strong>, un Soldado Colorado nacido
+            en Cochabamba, llegó al altiplano tras recibir apoyo de sus padres para unirse al ejército.
+            Tras completar su instrucción, fue enviado en una misión especial cerca de Oruro para
+            investigar ataques nocturnos donde los testigos aseguraban haber visto figuras
+            parecidas a diablos danzando entre la arena y el viento.
+            <br/><br/>
+            Allí encontró un antiguo relicario llamado <strong className="text-red-400">Waraq’o</strong>,
+            una piedra negra grabada con símbolos ancestrales. Al tocarla, el poder del Supay despertó,
+            marcando su piel con un sello espiritual. Sin saberlo, Kuntur se convirtió en portador
+            de un objeto capaz de abrir portales entre mundos.
+            <br/><br/>
+            Ese acto desató la furia de espíritus ancestrales representados por la{" "}
+            <span className="text-red-400 font-bold">Diablada</span>: demonios de máscaras brillantes,
+            ojos incandescentes y pasos que resonaban como cadenas. Además de ellos, criaturas
+            andinas corrompidas comenzaron a acecharlo: zorros con ojos de fuego, vicuñas fantasmales,
+            cóndores oscuros y llamas infernales hechas de ceniza volcánica.
+            <br/><br/>
+            Ahora Kuntur debe sobrevivir mientras decide si usa el poder del relicario para proteger
+            a la humanidad o si lo devuelve al inframundo para detener la invasión espiritual que él
+            mismo desató.
+            <br/><br/>
+            <em className="text-gray-400">
+              Su misión ya no es militar… es ancestral.
+            </em>
+          </p>
+
+          <img src={game} alt="Cinemática historia" className="article-img mt-6" />
+
+        </section>
+{/* DESARROLLADORES */}
+        <section id="desarrolladores" className="section">
+          <h3 className="section-title text-red-400">Desarrolladores</h3>
+          <p className="section-text leading-relaxed text-gray-300">
+            <strong className="text-yellow-400">Diego Mamani</strong>, un Soldado Colorado nacido
+            en Cochabamba, llegó al altiplano tras recibir apoyo de sus padres para unirse al ejército.
+            Tras completar su instrucción, fue enviado en una misión especial cerca de Oruro para
+            investigar ataques nocturnos donde los testigos aseguraban haber visto figuras
+            parecidas a diablos danzando entre la arena y el viento.
+            <br/><br/>
+            Allí encontró un antiguo relicario llamado <strong className="text-red-400">Waraq’o</strong>,
+            una piedra negra grabada con símbolos ancestrales. Al tocarla, el poder del Supay despertó,
+            marcando su piel con un sello espiritual. Sin saberlo, Kuntur se convirtió en portador
+            de un objeto capaz de abrir portales entre mundos.
+            <br/><br/>
+            Ese acto desató la furia de espíritus ancestrales representados por la{" "}
+            <span className="text-red-400 font-bold">Diablada</span>: demonios de máscaras brillantes,
+            ojos incandescentes y pasos que resonaban como cadenas. Además de ellos, criaturas
+            andinas corrompidas comenzaron a acecharlo: zorros con ojos de fuego, vicuñas fantasmales,
+            cóndores oscuros y llamas infernales hechas de ceniza volcánica.
+            <br/><br/>
+            Ahora Kuntur debe sobrevivir mientras decide si usa el poder del relicario para proteger
+            a la humanidad o si lo devuelve al inframundo para detener la invasión espiritual que él
+            mismo desató.
+            <br/><br/>
+            <em className="text-gray-400">
+              Su misión ya no es militar… es ancestral.
+            </em>
+          </p>
+
+          <img src={game} alt="Cinemática historia" className="article-img mt-6" />
+
+        </section>
 
 
 {/* CONCLUSIÓN */}
