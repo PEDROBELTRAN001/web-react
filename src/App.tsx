@@ -1,12 +1,23 @@
 import React from "react";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from 'react';
 import "./App.css";
 import fondo from "./assets/pantalla_principal.png";
 import game from "./assets/gameplay.png";
 import gol from "./assets/gol.png";
+import Trailer from "./trailer";
+import { FaDownload } from "react-icons/fa";
+
 
 export default function App() {
+  useEffect(() => {
+    AOS.init({ duration: 1000, once: true });
+  }, []);
   return (
+    
     <div className="w-screen min-h-screen overflow-x-hidden bg-gradient-to-b from-[#0b0c10] to-black text-gray-200">
+      
       {/* HEADER */}
       <header className="fixed top-0 left-0 w-full z-50 bg-black/70 backdrop-blur-sm border-b border-gray-800 py-4 px-10 flex justify-between items-center">
         <h1 className="text-3xl font-extrabold text-yellow-400 tracking-wide">
@@ -16,11 +27,11 @@ export default function App() {
           <a href="#historia" className="hover:text-yellow-400 transition">
             Historia
           </a>
+          <a href="#trailer" className="hover:text-yellow-400 transition">
+            Trailer
+          </a>
           <a href="#gameplay" className="hover:text-yellow-400 transition">
             Jugabilidad
-          </a>
-          <a href="#personajes" className="hover:text-yellow-400 transition">
-            Personajes
           </a>
           <a href="#personajes" className="hover:text-yellow-400 transition">
             Personajes
@@ -37,7 +48,7 @@ export default function App() {
       {/* HERO */}
       <section
   className="relative h-[70vh] flex flex-col justify-center items-center text-center bg-cover bg-center shadow-lg"
-  style={{ backgroundImage: `url(${fondo})` }}
+  style={{ backgroundImage: `url(${fondo})` }} data-aos="fade-up"
 >
 
         <div className="absolute inset-0 bg-black/70"></div>
@@ -48,13 +59,24 @@ export default function App() {
           <p className="text-gray-300 max-w-2xl mx-auto text-lg italic">
             “Ser soldado boliviano es un acto de valentía y honor.”
           </p>
+          <div className="flex justify-center mt-10">
+  <a
+    href="/downloads/Pachama.exe"
+    download
+    className="px-6 py-3 bg-yellow-400 text-black font-bold rounded-lg hover:bg-yellow-500 transition flex items-center gap-2"
+  >
+    <FaDownload className="w-5 h-5" />
+    Descargar
+  </a>
+</div>
+        
         </div>
       </section>
 
       {/* CONTENIDO PRINCIPAL */}
       <main className="max-w-5xl mx-auto px-6 pt-28 pb-16 space-y-24">
         {/* HISTORIA */}
-        <section id="historia" className="section">
+        <section id="historia" className="section" data-aos="fade-up">
           <h3 className="section-title text-red-400">Historia</h3>
           <p className="section-text leading-relaxed text-gray-300">
             <strong className="text-yellow-400">Diego Mamani</strong>, un Soldado Colorado nacido
@@ -86,9 +108,17 @@ export default function App() {
           <img src={game} alt="Cinemática historia" className="article-img mt-6" />
 
         </section>
+        {/* TRAILER */}
+        {/* TRAILER */}
+<section id="trailer" className="section" data-aos="fade-up">
+  <h3 className="section-title text-red-400">TEASER</h3>
+  <Trailer />
+</section>
+
+
 
         {/* GAMEPLAY */}
-<section id="gameplay" className="section">
+<section id="gameplay" className="section" data-aos="fade-up">
   <h3 className="section-title text-red-400">Jugabilidad</h3>
   <p className="section-text leading-relaxed text-gray-300">
     El jugador controla a <strong className="text-yellow-400">Diego Mamani</strong>, el Soldado Colorado de Bolivia,
@@ -129,13 +159,13 @@ export default function App() {
 
 
         {/* PERSONAJES */}
-<section id="personajes" className="section">
+<section id="personajes" className="section" data-aos="fade-up">
   <h3 className="section-title text-red-400">Personajes</h3>
 
   <div className="grid md:grid-cols-3 gap-10">
 
     {/* KANTUMARU (Soldado Colorado) */}
-    <div className="bg-gray-900 rounded-2xl overflow-hidden shadow-lg hover:shadow-red-500/40 transition transform hover:-translate-y-1">
+    <div className="bg-gray-900 rounded-2xl overflow-hidden shadow-lg hover:shadow-red-500/40 transition transform hover:-translate-y-1" data-aos="fade-up">
       <img
         src="../../assets/images/diego.png"
         alt="Kantumaru"
@@ -151,7 +181,7 @@ export default function App() {
     </div>
 
     {/* OSO DE LA DIABLADA */}
-    <div className="bg-gray-900 rounded-2xl overflow-hidden shadow-lg hover:shadow-red-500/40 transition transform hover:-translate-y-1">
+    <div className="bg-gray-900 rounded-2xl overflow-hidden shadow-lg hover:shadow-red-500/40 transition transform hover:-translate-y-1" data-aos="fade-up">
       <img
         src="../../assets/images/ositoblanco.png"
         alt="Oso de la Diablada"
@@ -167,7 +197,7 @@ export default function App() {
     </div>
 
     {/* DIABLO LANZADOR DE ESFERAS NEGRAS */}
-    <div className="bg-gray-900 rounded-2xl overflow-hidden shadow-lg hover:shadow-red-500/40 transition transform hover:-translate-y-1">
+    <div className="bg-gray-900 rounded-2xl overflow-hidden shadow-lg hover:shadow-red-500/40 transition transform hover:-translate-y-1" data-aos="fade-up">
       <img
         src="../../assets/images/diablada.png"
         alt="Diablo del Supay"
@@ -185,7 +215,7 @@ export default function App() {
   </div>
 </section>
 {/* ARTEFACTOS */}
-        <section id="artefactos" className="section">
+        <section id="artefactos" className="section" data-aos="fade-up">
           <h3 className="section-title text-red-400">Artefactos</h3>
           <p className="section-text leading-relaxed text-gray-300">
             <strong className="text-yellow-400">Diego Mamani</strong>, un Soldado Colorado nacido
@@ -217,8 +247,9 @@ export default function App() {
           <img src={game} alt="Cinemática historia" className="article-img mt-6" />
 
         </section>
+        
 {/* DESARROLLADORES */}
-        <section id="desarrolladores" className="section">
+        <section id="desarrolladores" className="section" data-aos="fade-up">
           <h3 className="section-title text-red-400">Desarrolladores</h3>
           <p className="section-text leading-relaxed text-gray-300">
             <strong className="text-yellow-400">Diego Mamani</strong>, un Soldado Colorado nacido
@@ -253,7 +284,7 @@ export default function App() {
 
 
 {/* CONCLUSIÓN */}
-<section className="section">
+<section className="section" data-aos="fade-up">
   <h3 className="section-title text-red-400">Conclusión</h3>
   <p className="section-text leading-relaxed text-gray-300">
     <strong className="text-yellow-400">PACHAMA</strong> combina mitología andina, folclore boliviano y acción de supervivencia
@@ -274,8 +305,9 @@ export default function App() {
 
       {/* FOOTER */}
       <footer className="text-center py-8 border-t border-gray-800 text-gray-500 text-sm">
-        © 2025 EpicVerse Studios — Todos los derechos reservados.
+        © 2025 AlpacasGamers — Todos los derechos reservados.
       </footer>
     </div>
   );
 }
+<script src="https://www.youtube.com/iframe_api"></script>
